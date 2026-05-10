@@ -1,0 +1,8 @@
+[
+  {
+    "ssid": "Company-WiFi",
+    "bssid": "AA:BB:CC:11:22:33",
+    "channel": 6,
+    "encryption": "WPA2"
+  }
+]

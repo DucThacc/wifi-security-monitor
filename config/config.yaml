@@ -1,0 +1,30 @@
+interface: wlan0mon
+whitelist_path: config/whitelist.json
+log_path: logs/wifi_alerts.jsonl
+
+# Interactive scan menu
+interactive_scan: true
+scan_seconds: 8
+scan_max_results: 20
+
+# Rogue AP detection
+ssid_similarity_threshold: 0.85
+alert_cooldown_seconds: 30
+
+# Deauth detection
+# If deauth frames >= threshold within window_seconds -> alert
+window_seconds: 10
+threshold_deauth: 20
+
+# Optional OpenSearch output
+opensearch:
+  enabled: false
+  endpoint: http://localhost:9200
+  index: wifi-security-logs
+  verify_tls: false
+
+# Optional Telegram alert
+telegram:
+  enabled: false
+  bot_token: ""
+  chat_id: ""
